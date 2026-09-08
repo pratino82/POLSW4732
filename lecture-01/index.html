@@ -41,6 +41,9 @@ body{font-family:"Open Sans Embedded","Open Sans",Arial,Helvetica,sans-serif;col
 .lecture-1 .slide[data-logical="14"] .slide-body dt{margin:.12em 0 .02em}
 .lecture-1 .slide[data-logical="14"] .slide-body dd{margin:0 0 .1em .62em}
 .lecture-1 .slide[data-logical="14"] .slide-body dd p{margin:0}
+.lecture-1 .slide[data-logical="23"] .slide-body{justify-content:flex-start;font-size:39px}
+.lecture-1 .slide[data-logical="23"] .slide-body p{margin:.18em 0}
+.lecture-1 .slide[data-logical="23"] figure{margin:.18em auto}
 .lecture-1 .slide[data-logical="47"] .slide-body{justify-content:flex-start}
 .lecture-1 .slide[data-logical="47"] .slide-body{font-size:39px}
 .lecture-1 .slide[data-logical="47"] .slide-body p{margin:.14em 0}
@@ -93,6 +96,7 @@ figure,.center{text-align:center;margin:.35em auto;width:100%}figure img,.center
 .game-wrap{text-align:center;margin:.5em auto}.game-column-player{margin:0 0 .2em 14%}.game-grid{display:flex;align-items:center;justify-content:center;gap:.65em}
 .game-row-player{white-space:nowrap}.game-matrix{border-collapse:collapse;font-size:.95em}.game-matrix th{font-weight:400}
 .game-matrix td{border:2px solid #666;padding:.18em .48em;min-width:3.4em;background-clip:padding-box}.game-matrix th{padding:.15em .42em}
+.game-matrix .deletion-cell{position:relative}.game-matrix .deletion-cell::after{content:"";position:absolute;left:5%;right:5%;top:50%;border-top:3px solid #222;transform:rotate(-8deg);pointer-events:none}
 .game-caption{font-variant:small-caps;font-weight:700;margin-top:.28em}
 .proof-array-wrap{width:100%;overflow:visible}.proof-array{border-collapse:collapse;width:100%;font-size:.7em;text-align:center}
 .proof-array th,.proof-array td{padding:.12em .2em;white-space:nowrap}.proof-array thead{border-bottom:1px solid #333}
@@ -185,8 +189,8 @@ weapons (same balance of power, &lt;$)</p><p>But neither wants to be <em>the onl
       <div class="game-grid">
         <div class="game-row-player">India</div>
         <table class="game-matrix">
-          <thead><tr><th></th><th>\( \neg D \)</th><th>\(D \)</th></tr></thead>
-          <tbody><tr><th>\(\neg D\)</th><td>\( \quad 2,2 \quad \)</td><td>\( \quad 0,3 \quad \)</td></tr><tr><th>\( D\)</th><td>\(3,0\)</td><td>\(1,1\)</td></tr></tbody>
+          <thead><tr><th></th><th><span class="tex-math">\( \neg D \)</span></th><th><span class="tex-math">\(D \)</span></th></tr></thead>
+          <tbody><tr><th><span class="tex-math">\(\neg D\)</span></th><td><span class="tex-math">\( \quad 2,2 \quad \)</span></td><td><span class="tex-math">\( \quad 0,3 \quad \)</span></td></tr><tr><th><span class="tex-math">\( D\)</span></th><td><span class="tex-math">\(3,0\)</span></td><td><span class="tex-math">\(1,1\)</span></td></tr></tbody>
         </table>
       </div>
       
@@ -394,8 +398,8 @@ find mixed strategy Nash equilibria</p><p>The augmented matching pennies game:</
       <div class="game-grid">
         <div class="game-row-player">Pl. 1</div>
         <table class="game-matrix">
-          <thead><tr><th></th><th>\(  H\)</th><th>\(  T \)</th><th>\( L \)</th><th>\( R \)</th></tr></thead>
-          <tbody><tr><th><span class="tex-math">\(H\)</span></th><td>\(1,-1\)</td><td>\(-1,1\)</td><td>\(0,-2\)</td><td>\(0,-3\)</td></tr><tr><th><span class="tex-math">\(T\)</span></th><td>\(-1,1\)</td><td>\(1,-1\)</td><td>\(0,-2\)</td><td>\(0,-3\)</td></tr><tr><th><span class="tex-math">\(D\)</span></th><td>\(-2,0\)</td><td>\(-2,0\)</td><td>\(-2,1\)</td><td>\(2,0\)</td></tr></tbody>
+          <thead><tr><th></th><th><span class="tex-math">\(  H\)</span></th><th><span class="tex-math">\(  T \)</span></th><th><span class="tex-math">\( L \)</span></th><th><span class="tex-math">\( R \)</span></th></tr></thead>
+          <tbody><tr><th><span class="tex-math">\(H\)</span></th><td><span class="tex-math">\(1,-1\)</span></td><td><span class="tex-math">\(-1,1\)</span></td><td><span class="tex-math">\(0,-2\)</span></td><td><span class="tex-math">\(0,-3\)</span></td></tr><tr><th><span class="tex-math">\(T\)</span></th><td><span class="tex-math">\(-1,1\)</span></td><td><span class="tex-math">\(1,-1\)</span></td><td><span class="tex-math">\(0,-2\)</span></td><td><span class="tex-math">\(0,-3\)</span></td></tr><tr><th><span class="tex-math">\(D\)</span></th><td><span class="tex-math">\(-2,0\)</span></td><td><span class="tex-math">\(-2,0\)</span></td><td><span class="tex-math">\(-2,1\)</span></td><td><span class="tex-math">\(2,0\)</span></td></tr></tbody>
         </table>
       </div>
       
@@ -413,8 +417,8 @@ find mixed strategy Nash equilibria</p><p>Augmented matching pennies</p>
       <div class="game-grid">
         <div class="game-row-player">Pl. 1</div>
         <table class="game-matrix">
-          <thead><tr><th></th><th>\(  H \)</th><th>\( T \)</th><th>\( L \)</th><th>\( R \)</th></tr></thead>
-          <tbody><tr><th><span class="tex-math">\(H\)</span></th><td>\( 1,-1$</td><td>\( -1,1 \)</td><td>\( 0,-2 \)</td><td>\( 0,-3 \)</td></tr><tr><th><span class="tex-math">\(T\)</span></th><td>\( -1,1$</td><td>\( 1,-1 \)</td><td>\( 0,-2 \)</td><td>\( 0,-3 \)</td></tr><tr><th><span class="tex-math">\(D\)</span></th><td>\( -2,0$</td><td>\( -2,0 \)</td><td>\( -2,1 \)</td><td>\( 2,0 \)</td></tr></tbody>
+          <thead><tr><th></th><th><span class="tex-math">\(  H \)</span></th><th><span class="tex-math">\( T \)</span></th><th><span class="tex-math">\( \textcolor{#8a6d00}{L} \)</span></th><th class="deletion-cell"><span class="tex-math">\( \textcolor{#b00020}{R} \)</span></th></tr></thead>
+          <tbody><tr><th><span class="tex-math">\(H\)</span></th><td><span class="tex-math">\( 1,-1 \)</span></td><td><span class="tex-math">\( -1,1 \)</span></td><td><span class="tex-math">\( 0,\textcolor{#8a6d00}{-2} \)</span></td><td class="deletion-cell"><span class="tex-math">\( 0,\textcolor{#b00020}{-3} \)</span></td></tr><tr><th><span class="tex-math">\(T\)</span></th><td><span class="tex-math">\( -1,1 \)</span></td><td><span class="tex-math">\( 1,-1 \)</span></td><td><span class="tex-math">\( 0,\textcolor{#8a6d00}{-2} \)</span></td><td class="deletion-cell"><span class="tex-math">\( 0,\textcolor{#b00020}{-3} \)</span></td></tr><tr><th><span class="tex-math">\(D\)</span></th><td><span class="tex-math">\( -2,0 \)</span></td><td><span class="tex-math">\( -2,0 \)</span></td><td><span class="tex-math">\( -2,\textcolor{#8a6d00}{1} \)</span></td><td class="deletion-cell"><span class="tex-math">\( 2,\textcolor{#b00020}{0} \)</span></td></tr></tbody>
         </table>
       </div>
       
@@ -432,8 +436,8 @@ find mixed strategy Nash equilibria</p><p>Augmented matching pennies</p>
       <div class="game-grid">
         <div class="game-row-player">Pl. 1</div>
         <table class="game-matrix">
-          <thead><tr><th></th><th>\(H \)</th><th>\(T \)</th><th>\(L \)</th></tr></thead>
-          <tbody><tr><th><span class="tex-math">\(H\)</span></th><td>\(1,-1 \)</td><td>\(-1,1 \)</td><td>\(0,-2 \)</td></tr><tr><th><span class="tex-math">\(T\)</span></th><td>\(-1,1 \)</td><td>\(1,-1 \)</td><td>\(0,-2 \)</td></tr><tr><th><span class="tex-math">\(D\)</span></th><td>\(-2,0 \)</td><td>\(-2,0 \)</td><td>\(-2,1 \)</td></tr></tbody>
+          <thead><tr><th></th><th><span class="tex-math">\(H \)</span></th><th><span class="tex-math">\(T \)</span></th><th><span class="tex-math">\(L \)</span></th></tr></thead>
+          <tbody><tr><th><span class="tex-math">\(H\)</span></th><td><span class="tex-math">\(1,-1 \)</span></td><td><span class="tex-math">\(-1,1 \)</span></td><td><span class="tex-math">\(0,-2 \)</span></td></tr><tr><th><span class="tex-math">\(\textcolor{#8a6d00}{T}\)</span></th><td><span class="tex-math">\(\textcolor{#8a6d00}{-1},1 \)</span></td><td><span class="tex-math">\(\textcolor{#8a6d00}{1},-1 \)</span></td><td><span class="tex-math">\(\textcolor{#8a6d00}{0},-2 \)</span></td></tr><tr><th class="deletion-cell"><span class="tex-math">\(\textcolor{#b00020}{D}\)</span></th><td class="deletion-cell"><span class="tex-math">\(\textcolor{#b00020}{-2},0 \)</span></td><td class="deletion-cell"><span class="tex-math">\(\textcolor{#b00020}{-2},0 \)</span></td><td class="deletion-cell"><span class="tex-math">\(\textcolor{#b00020}{-2},1 \)</span></td></tr></tbody>
         </table>
       </div>
       
@@ -451,8 +455,8 @@ find mixed strategy Nash equilibria</p><p>Augmented matching pennies</p>
       <div class="game-grid">
         <div class="game-row-player">Pl. 1</div>
         <table class="game-matrix">
-          <thead><tr><th></th><th>\(H \)</th><th>\(T \)</th><th>\(L \)</th></tr></thead>
-          <tbody><tr><th><span class="tex-math">\(H\)</span></th><td>\(1,-1 \)</td><td>\(-1,1 \)</td><td>\(0,-2 \)</td></tr><tr><th><span class="tex-math">\(T\)</span></th><td>\(-1,1 \)</td><td>\(1,-1 \)</td><td>\(0,-2 \)</td></tr></tbody>
+          <thead><tr><th></th><th><span class="tex-math">\(H \)</span></th><th><span class="tex-math">\(\textcolor{#8a6d00}{T} \)</span></th><th class="deletion-cell"><span class="tex-math">\(\textcolor{#b00020}{L} \)</span></th></tr></thead>
+          <tbody><tr><th><span class="tex-math">\(H\)</span></th><td><span class="tex-math">\(1,-1 \)</span></td><td><span class="tex-math">\(-1,\textcolor{#8a6d00}{1} \)</span></td><td class="deletion-cell"><span class="tex-math">\(0,\textcolor{#b00020}{-2} \)</span></td></tr><tr><th><span class="tex-math">\(T\)</span></th><td><span class="tex-math">\(-1,1 \)</span></td><td><span class="tex-math">\(1,\textcolor{#8a6d00}{-1} \)</span></td><td class="deletion-cell"><span class="tex-math">\(0,\textcolor{#b00020}{-2} \)</span></td></tr></tbody>
         </table>
       </div>
       
@@ -469,8 +473,8 @@ find mixed strategy Nash equilibria</p><p>Augmented matching pennies</p>
       <div class="game-grid">
         <div class="game-row-player">Pl. 1</div>
         <table class="game-matrix">
-          <thead><tr><th></th><th>\( H\)</th><th>\(T \)</th></tr></thead>
-          <tbody><tr><th><span class="tex-math">\(H\)</span></th><td>\(1,-1 \)</td><td>\(-1,1 \)</td></tr><tr><th><span class="tex-math">\(T\)</span></th><td>\(-1,1 \)</td><td>\(1,-1 \)</td></tr></tbody>
+          <thead><tr><th></th><th><span class="tex-math">\( H\)</span></th><th><span class="tex-math">\(T \)</span></th></tr></thead>
+          <tbody><tr><th><span class="tex-math">\(H\)</span></th><td><span class="tex-math">\(1,-1 \)</span></td><td><span class="tex-math">\(-1,1 \)</span></td></tr><tr><th><span class="tex-math">\(T\)</span></th><td><span class="tex-math">\(-1,1 \)</span></td><td><span class="tex-math">\(1,-1 \)</span></td></tr></tbody>
         </table>
       </div>
       
@@ -490,8 +494,8 @@ probability on <span class="math inline tex-math">\(H\)</span> and <span class="
       <div class="game-grid">
         <div class="game-row-player">Pl. 1</div>
         <table class="game-matrix">
-          <thead><tr><th></th><th>\( H \)</th><th>\( T \)</th></tr></thead>
-          <tbody><tr><th><span class="tex-math">\(H\)</span></th><td>\( 1,-1 \)</td><td>\( -1,1 \)</td></tr><tr><th><span class="tex-math">\(T\)</span></th><td>\( -1,1 \)</td><td>\( 1,-1 \)</td></tr></tbody>
+          <thead><tr><th></th><th><span class="tex-math">\( H \)</span></th><th><span class="tex-math">\( T \)</span></th></tr></thead>
+          <tbody><tr><th><span class="tex-math">\(H\)</span></th><td><span class="tex-math">\( 1,-1 \)</span></td><td><span class="tex-math">\( -1,1 \)</span></td></tr><tr><th><span class="tex-math">\(T\)</span></th><td><span class="tex-math">\( -1,1 \)</span></td><td><span class="tex-math">\( 1,-1 \)</span></td></tr></tbody>
         </table>
       </div>
       
@@ -518,8 +522,8 @@ reasoning, <span class="math inline tex-math">\(\sigma_1(H)=1/2\)</span></p>
       <div class="game-grid">
         <div class="game-row-player">Pl. 1</div>
         <table class="game-matrix">
-          <thead><tr><th></th><th>\(L\)</th><th>\(R\)</th></tr></thead>
-          <tbody><tr><th><span class="tex-math">\(U\)</span></th><td>\(2,1\)</td><td>\(-1,2\)</td></tr><tr><th><span class="tex-math">\(M\)</span></th><td>\(0,3\)</td><td>\(0,1\)</td></tr><tr><th><span class="tex-math">\(D\)</span></th><td>\(-1,-2\)</td><td>\(2,-1\)</td></tr></tbody>
+          <thead><tr><th></th><th><span class="tex-math">\(L\)</span></th><th><span class="tex-math">\(R\)</span></th></tr></thead>
+          <tbody><tr><th><span class="tex-math">\(U\)</span></th><td><span class="tex-math">\(2,1\)</span></td><td><span class="tex-math">\(-1,2\)</span></td></tr><tr><th><span class="tex-math">\(M\)</span></th><td><span class="tex-math">\(0,3\)</span></td><td><span class="tex-math">\(0,1\)</span></td></tr><tr><th><span class="tex-math">\(D\)</span></th><td><span class="tex-math">\(-1,-2\)</span></td><td><span class="tex-math">\(2,-1\)</span></td></tr></tbody>
         </table>
       </div>
       
@@ -536,8 +540,8 @@ reasoning, <span class="math inline tex-math">\(\sigma_1(H)=1/2\)</span></p>
       <div class="game-grid">
         <div class="game-row-player">Pl. 1</div>
         <table class="game-matrix">
-          <thead><tr><th></th><th>\(R\)</th><th>\(P\)</th><th>\(S\)</th></tr></thead>
-          <tbody><tr><th><span class="tex-math">\(R\)</span></th><td>\(0,0\)</td><td>\(-1,1\)</td><td>\(1,-1\)</td></tr><tr><th><span class="tex-math">\(P\)</span></th><td>\(1,-1\)</td><td>\(0,0\)</td><td>\(-1,1\)</td></tr><tr><th><span class="tex-math">\(S\)</span></th><td>\(-1,1\)</td><td>\(1,-1\)</td><td>\(0,0\)</td></tr></tbody>
+          <thead><tr><th></th><th><span class="tex-math">\(R\)</span></th><th><span class="tex-math">\(P\)</span></th><th><span class="tex-math">\(S\)</span></th></tr></thead>
+          <tbody><tr><th><span class="tex-math">\(R\)</span></th><td><span class="tex-math">\(0,0\)</span></td><td><span class="tex-math">\(-1,1\)</span></td><td><span class="tex-math">\(1,-1\)</span></td></tr><tr><th><span class="tex-math">\(P\)</span></th><td><span class="tex-math">\(1,-1\)</span></td><td><span class="tex-math">\(0,0\)</span></td><td><span class="tex-math">\(-1,1\)</span></td></tr><tr><th><span class="tex-math">\(S\)</span></th><td><span class="tex-math">\(-1,1\)</span></td><td><span class="tex-math">\(1,-1\)</span></td><td><span class="tex-math">\(0,0\)</span></td></tr></tbody>
         </table>
       </div>
       
@@ -555,8 +559,8 @@ no sharper prediction than “each equilibrium can happen”</p>
       <div class="game-grid">
         <div class="game-row-player">Pl. 1</div>
         <table class="game-matrix">
-          <thead><tr><th></th><th>\(R\)</th><th>\(P\)</th></tr></thead>
-          <tbody><tr><th><span class="tex-math">\(R\)</span></th><td>\(2,2\)</td><td>\(0,0\)</td></tr><tr><th><span class="tex-math">\(P\)</span></th><td>\(0,0\)</td><td>\(1,1\)</td></tr></tbody>
+          <thead><tr><th></th><th><span class="tex-math">\(R\)</span></th><th><span class="tex-math">\(P\)</span></th></tr></thead>
+          <tbody><tr><th><span class="tex-math">\(R\)</span></th><td><span class="tex-math">\(2,2\)</span></td><td><span class="tex-math">\(0,0\)</span></td></tr><tr><th><span class="tex-math">\(P\)</span></th><td><span class="tex-math">\(0,0\)</span></td><td><span class="tex-math">\(1,1\)</span></td></tr></tbody>
         </table>
       </div>
       
@@ -571,8 +575,8 @@ no sharper prediction than “each equilibrium can happen”</p>
       <div class="game-grid">
         <div class="game-row-player">Pl. 1</div>
         <table class="game-matrix">
-          <thead><tr><th></th><th>\(R\)</th><th>\(P\)</th></tr></thead>
-          <tbody><tr><th><span class="tex-math">\(R\)</span></th><td>\(2,2\)</td><td>\(-100,0\)</td></tr><tr><th><span class="tex-math">\(P\)</span></th><td>\(0,-100\)</td><td>\(1,1\)</td></tr></tbody>
+          <thead><tr><th></th><th><span class="tex-math">\(R\)</span></th><th><span class="tex-math">\(P\)</span></th></tr></thead>
+          <tbody><tr><th><span class="tex-math">\(R\)</span></th><td><span class="tex-math">\(2,2\)</span></td><td><span class="tex-math">\(-100,0\)</span></td></tr><tr><th><span class="tex-math">\(P\)</span></th><td><span class="tex-math">\(0,-100\)</span></td><td><span class="tex-math">\(1,1\)</span></td></tr></tbody>
         </table>
       </div>
       
@@ -735,8 +739,8 @@ L(U)L(D),L(U)R(D),R(U)L(D),R(U)R(D)  \}\)</span></p></li>
       <div class="game-grid">
         <div class="game-row-player">Pl. 1</div>
         <table class="game-matrix">
-          <thead><tr><th></th><th>\(L(U)L(D)\)</th><th>\(L(U)R(D)\)</th><th>\(R(U)L(D)\)</th><th>\(R(U)R(D)\)</th></tr></thead>
-          <tbody><tr><th><span class="tex-math">\(U\)</span></th><td>\(3,1\)</td><td>\(3,1\)</td><td>\(1,2\)</td><td>\(1,2\)</td></tr><tr><th><span class="tex-math">\(D\)</span></th><td>\(0,0\)</td><td>\(2,1\)</td><td>\(0,0\)</td><td>\(2,1\)</td></tr></tbody>
+          <thead><tr><th></th><th><span class="tex-math">\(L(U)L(D)\)</span></th><th><span class="tex-math">\(L(U)R(D)\)</span></th><th><span class="tex-math">\(R(U)L(D)\)</span></th><th><span class="tex-math">\(R(U)R(D)\)</span></th></tr></thead>
+          <tbody><tr><th><span class="tex-math">\(U\)</span></th><td><span class="tex-math">\(3,1\)</span></td><td><span class="tex-math">\(3,1\)</span></td><td><span class="tex-math">\(1,2\)</span></td><td><span class="tex-math">\(1,2\)</span></td></tr><tr><th><span class="tex-math">\(D\)</span></th><td><span class="tex-math">\(0,0\)</span></td><td><span class="tex-math">\(2,1\)</span></td><td><span class="tex-math">\(0,0\)</span></td><td><span class="tex-math">\(2,1\)</span></td></tr></tbody>
         </table>
       </div>
       
@@ -821,8 +825,8 @@ by: <span class="math display tex-math">\[\sigma^* = [ \sigma(U)= 0, \quad
 <p>In the previous game, change player <span class="math inline tex-math">\(2\)</span>’s payoffs as follows: <span class="math inline tex-math">\(\pi_2(D,R)=1\)</span>, <span class="math inline tex-math">\(\pi_2(U,L)=\pi_2(U,R)=\pi_2(D,L)= 0\)</span></p><p>Is <span class="math inline tex-math">\(\sigma^*\)</span> still a SPE in this
 modified game?</p><p>To characterize the full set of SPE, consider three cases
 separately</p><p>1. <span class="math inline tex-math">\(1\)</span> is indifferent (<span class="math inline tex-math">\(\sigma(U) \in [0,1]\)</span>)</p><p>2. <span class="math inline tex-math">\(1\)</span> strictly prefers <span class="math inline tex-math">\(U\)</span> (<span class="math inline tex-math">\(\sigma(U)
-=1\)</span>)</p><p>2. <span class="math inline tex-math">\(1\)</span> strictly prefers <span class="math inline tex-math">\(D\)</span> (<span class="math inline tex-math">\(\sigma(U)
--0\)</span>)</p><p>For each case, ask (i) what must be true about <span class="math inline tex-math">\(\sigma(R\mid U)\)</span> and <span class="math inline tex-math">\(\sigma(R\mid D)\)</span> and (ii) is this
+=1\)</span>)</p><p>3. <span class="math inline tex-math">\(1\)</span> strictly prefers <span class="math inline tex-math">\(D\)</span> (<span class="math inline tex-math">\(\sigma(U)
+=0\)</span>)</p><p>For each case, ask (i) what must be true about <span class="math inline tex-math">\(\sigma(R\mid U)\)</span> and <span class="math inline tex-math">\(\sigma(R\mid D)\)</span> and (ii) is this
 individually rational (payoff-maximizing) for <span class="math inline tex-math">\(2\)</span>?</p>
 </div><div class="slide-number">47/52</div></div>
 <div class="slide" data-logical="48" data-steps="1"><h2>Exercise (the ultimatum game)</h2><div class="slide-body">
@@ -850,8 +854,8 @@ form versions of these games</p>
       <div class="game-grid">
         <div class="game-row-player">Pl. 1</div>
         <table class="game-matrix">
-          <thead><tr><th></th><th>\(H\)</th><th>\(T\)</th></tr></thead>
-          <tbody><tr><th><span class="tex-math">\(H\)</span></th><td>\(1,-1\)</td><td>\(-1,1\)</td></tr><tr><th><span class="tex-math">\(T\)</span></th><td>\(-1,1\)</td><td>\(1,-1\)</td></tr></tbody>
+          <thead><tr><th></th><th><span class="tex-math">\(H\)</span></th><th><span class="tex-math">\(T\)</span></th></tr></thead>
+          <tbody><tr><th><span class="tex-math">\(H\)</span></th><td><span class="tex-math">\(1,-1\)</span></td><td><span class="tex-math">\(-1,1\)</span></td></tr><tr><th><span class="tex-math">\(T\)</span></th><td><span class="tex-math">\(-1,1\)</span></td><td><span class="tex-math">\(1,-1\)</span></td></tr></tbody>
         </table>
       </div>
       
