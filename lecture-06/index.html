@@ -24,6 +24,7 @@ body{font-family:"Open Sans Embedded","Open Sans",Arial,Helvetica,sans-serif;col
   line-height:1.24;transform:scale(var(--fit));transform-origin:top left;width:calc(1221px / var(--fit));
   display:flex;flex-direction:column;justify-content:center}
 .slide.proof-slide .slide-body{font-size:33px}
+.lecture-6 .slide[data-source-logical="8"] .slide-body{font-size:36px}
 .lecture-2 .slide[data-source-logical="15"] .slide-body{font-size:39px}
 .lecture-2 .slide[data-source-logical="51"] .slide-body{font-size:39px}
 .slide-body p{margin:.34em 0}.slide-body ul,.slide-body ol{margin:.38em 0;padding-left:1.55em}
@@ -93,6 +94,7 @@ body{font-family:"Open Sans Embedded","Open Sans",Arial,Helvetica,sans-serif;col
 .definition::before{content:"Definition"}.theorem::before{content:"Theorem"}.proposition::before{content:"Proposition"}
 .fact::before{content:"Fact"}.proof::before{content:"Proof."}
 figure,.center{text-align:center;margin:.35em auto;width:100%}figure img,.center img,.slide-body>p>img{display:block;max-width:100%;max-height:780px;height:auto;margin:.2em auto}
+img[data-source-file^="entry"]{clip-path:inset(2px 0 0 2px)}
 .game-wrap{text-align:center;margin:.5em auto}.game-column-player{margin:0 0 .2em 14%}.game-grid{display:flex;align-items:center;justify-content:center;gap:.65em}
 .game-row-player{white-space:nowrap}.game-matrix{border-collapse:collapse;font-size:.95em}.game-matrix th{font-weight:400}
 .game-matrix td{border:2px solid #666;padding:.18em .48em;min-width:3.4em;background-clip:padding-box}.game-matrix th{padding:.15em .42em}
@@ -756,7 +758,7 @@ class SlidePresentation{
   }
   fit(slide){
     slide.style.setProperty("--fit","1");const body=slide.querySelector(".slide-body");if(!body)return;
-    body.style.justifyContent="center";if(!slide.classList.contains("proof-slide"))return;
+    body.style.justifyContent="center";
     let ratio=Math.min(1,body.clientHeight/Math.max(body.scrollHeight,1),body.clientWidth/Math.max(body.scrollWidth,1));
     if(ratio<.995){body.style.justifyContent="flex-start";
       ratio=Math.min(1,body.clientHeight/Math.max(body.scrollHeight,1),body.clientWidth/Math.max(body.scrollWidth,1))}
