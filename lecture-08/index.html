@@ -29,6 +29,10 @@ body{font-family:"Open Sans Embedded","Open Sans",Arial,Helvetica,sans-serif;col
 .lecture-2 .slide[data-source-logical="51"] .slide-body{font-size:39px}
 .slide-body p{margin:.34em 0}.slide-body ul,.slide-body ol{margin:.38em 0;padding-left:1.55em}
 .slide-body li{margin:.38em 0;padding-left:.18em}.slide-body li::marker{color:var(--blue)}
+.lecture-8 .slide[data-source-logical="9"] .slide-body{justify-content:flex-start}
+.lecture-8 .slide[data-source-logical="9"] .slide-body p{margin:.16em 0}
+.lecture-8 .slide[data-source-logical="9"] .slide-body ol{margin:.16em 0}
+.lecture-8 .slide[data-source-logical="9"] .slide-body li{margin:.16em 0}
 .slide.has-footnotes .slide-body{bottom:142px}
 .footnote-marker{font-size:.58em;line-height:0;vertical-align:super;color:var(--blue);margin-left:.08em}
 .slide-footnotes{position:absolute;left:112px;right:112px;bottom:42px;min-height:48px;
@@ -292,9 +296,15 @@ have</p>
 <p><span class="math display tex-math">\[\int u(x) \,dF(x) \geq \int
 u(x)\,dG(x)\]</span></p>
 </div>
-<p><span class="accent">Useful Fact</span>: If <span class="math inline tex-math">\(F(\cdot)\)</span> and <span class="math inline tex-math">\(G(\cdot)\)</span> have the same mean and their
-CDFs cross once (from below), then <span class="math inline tex-math">\(F(\cdot)\)</span> second-order stochastically
-dominates <span class="math inline tex-math">\(G(\cdot)\)</span></p>
+<p><span class="accent">Useful Facts</span>:</p>
+<ol>
+<li><p><span class="math inline tex-math">\(F(\cdot) \succeq_{SOSD} G(\cdot)
+\Longrightarrow \mathbb{E}\{F\} \geq \mathbb{E}\{G\}\)</span></p></li>
+<li><p>If <span class="math inline tex-math">\(\mathbb{E}\{F\} \geq
+\mathbb{E}\{G\}\)</span> and their CDFs cross once (from below), then
+<span class="math inline tex-math">\(F(\cdot) \succeq_{SOSD}
+G(\cdot)\)</span></p></li>
+</ol>
 
 </div><div class="slide-number">9/42</div></div>
 <section class="slide outline-slide" data-outline="true" data-logical="10" data-steps="1">
