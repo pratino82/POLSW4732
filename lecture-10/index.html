@@ -29,6 +29,10 @@ body{font-family:"Open Sans Embedded","Open Sans",Arial,Helvetica,sans-serif;col
 .lecture-2 .slide[data-source-logical="51"] .slide-body{font-size:39px}
 .slide-body p{margin:.34em 0}.slide-body ul,.slide-body ol{margin:.38em 0;padding-left:1.55em}
 .slide-body li{margin:.38em 0;padding-left:.18em}.slide-body li::marker{color:var(--blue)}
+.lecture-8 .slide[data-source-logical="9"] .slide-body{justify-content:flex-start}
+.lecture-8 .slide[data-source-logical="9"] .slide-body p{margin:.16em 0}
+.lecture-8 .slide[data-source-logical="9"] .slide-body ol{margin:.16em 0}
+.lecture-8 .slide[data-source-logical="9"] .slide-body li{margin:.16em 0}
 .slide.has-footnotes .slide-body{bottom:142px}
 .footnote-marker{font-size:.58em;line-height:0;vertical-align:super;color:var(--blue);margin-left:.08em}
 .slide-footnotes{position:absolute;left:112px;right:112px;bottom:42px;min-height:48px;
@@ -62,6 +66,7 @@ body{font-family:"Open Sans Embedded","Open Sans",Arial,Helvetica,sans-serif;col
 .lecture-8 .slide[data-source-logical="41"] .slide-body,
 .lecture-8 .slide[data-source-logical="42"] .slide-body,
 .lecture-9 .slide[data-source-logical="3"] .slide-body,
+.lecture-9 .slide[data-source-logical="11"] .slide-body,
 .lecture-9 .slide[data-source-logical="13"] .slide-body,
 .lecture-9 .slide[data-source-logical="24"] .slide-body,
 .lecture-10 .slide[data-source-logical="7"] .slide-body,
@@ -331,7 +336,7 @@ than some <span class="math inline tex-math">\(\theta^*\)</span><br>
 called a <span style="color: structure">cutpoint</span></p>
 
 </div><div class="slide-number">12/40</div></div>
-<div class="slide proof-slide" data-logical="13" data-source-logical="13" data-steps="1"><h2>Median Voter Theorem</h2><div class="slide-body">
+<div class="slide" data-logical="13" data-source-logical="13" data-steps="1"><h2>Median’s Decisiveness</h2><div class="slide-body">
 
 <div class="theorem">
 <p>Let <span class="math inline tex-math">\(\{\succsim_\theta\}_{\theta \in
@@ -763,7 +768,8 @@ and interior for all <span class="math inline tex-math">\(\theta\)</span>.
 Implies it satisfies the first-order condition</p>
 <p><span class="math display tex-math">\[f_1\left(a^*(\theta),\theta\right)=0\]</span></p></li>
 <li><p>By the chain rule, the derivative of the value function is</p>
-<p><span class="math display tex-math">\[V'(\theta)=f_1\left(a^*(\theta),\theta\right)\frac{da^*}{d\theta}(\theta)
+<p><span class="math display tex-math">\[V'(\theta)=f_1\left(a^*(\theta),\theta\right)\frac{d
+a^*(\theta)}{d\theta}
                   +f_2\left(a^*(\theta),\theta\right)\]</span></p></li>
 <li><p>By the first-order condition, this can be written <span class="math display tex-math">\[V'(\theta)=f_2\left(a^*(\theta),\theta\right)\]</span></p></li>
 </ul>
