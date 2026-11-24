@@ -29,6 +29,13 @@ body{font-family:"Open Sans Embedded","Open Sans",Arial,Helvetica,sans-serif;col
 .lecture-2 .slide[data-source-logical="51"] .slide-body{font-size:39px}
 .slide-body p{margin:.34em 0}.slide-body ul,.slide-body ol{margin:.38em 0;padding-left:1.55em}
 .slide-body li{margin:.38em 0;padding-left:.18em}.slide-body li::marker{color:var(--blue)}
+.lecture-8 .slide[data-source-logical="9"] .slide-body{justify-content:flex-start}
+.lecture-8 .slide[data-source-logical="9"] .slide-body p{margin:.16em 0}
+.lecture-8 .slide[data-source-logical="9"] .slide-body ol{margin:.16em 0}
+.lecture-8 .slide[data-source-logical="9"] .slide-body li{margin:.16em 0}
+.lecture-12 .slide[data-source-logical="12"] .slide-body p{margin:.16em 0}
+.lecture-12 .slide[data-source-logical="12"] .slide-body ul{margin:.18em 0}
+.lecture-12 .slide[data-source-logical="12"] .slide-body li{margin:.14em 0}
 .slide.has-footnotes .slide-body{bottom:142px}
 .footnote-marker{font-size:.58em;line-height:0;vertical-align:super;color:var(--blue);margin-left:.08em}
 .slide-footnotes{position:absolute;left:112px;right:112px;bottom:42px;min-height:48px;
@@ -62,6 +69,7 @@ body{font-family:"Open Sans Embedded","Open Sans",Arial,Helvetica,sans-serif;col
 .lecture-8 .slide[data-source-logical="41"] .slide-body,
 .lecture-8 .slide[data-source-logical="42"] .slide-body,
 .lecture-9 .slide[data-source-logical="3"] .slide-body,
+.lecture-9 .slide[data-source-logical="11"] .slide-body,
 .lecture-9 .slide[data-source-logical="13"] .slide-body,
 .lecture-9 .slide[data-source-logical="24"] .slide-body,
 .lecture-10 .slide[data-source-logical="7"] .slide-body,
@@ -260,7 +268,7 @@ u_{i}[d_{i}(p_{i})]-p_{i}d_{i}(p_{i}) \Big)\]</span></p>
 </div><div class="slide-number">10/35</div></div>
 <div class="slide" data-logical="11" data-source-logical="11" data-steps="1"><h2>The production side</h2><div class="slide-body">
 
-<p>Normalize productivity (and thus wage) in numeraire to 1</p>
+<p>Numeraire: <span class="math inline tex-math">\(y_0=L_0\)</span>, <span class="math inline tex-math">\(p_0=1\)</span>. Positive output implies <span class="math inline tex-math">\(w=1\)</span></p>
 <p>In each sector, <span class="math inline tex-math">\(K_{i}\)</span> units of
 the specific factor of production</p>
 <p>In each sector, inputs are labor and a specific factor: <span class="math display tex-math">\[y_{i}=f_{i}(L_{i},K_{i})\]</span></p>
@@ -278,10 +286,16 @@ returns to scale (<span class="math inline tex-math">\(f_i(aL,aK)=af_i(L,K)\)</s
 <div class="slide" data-logical="12" data-source-logical="12" data-steps="1"><h2>Nota bene</h2><div class="slide-body">
 <p> Firms</p>
 <ul>
-<li><p>Choose quantities (Cournot)</p></li>
-<li><p>Not prices (Bertrand)</p></li>
+<li><p>Choose quantities (similar to Cournot).</p></li>
+<li><p>Take output prices and wages as given.</p></li>
 </ul>
-<p>Wage is fixed to one, so they make positive profits</p><p>Not an explicit model of competition in each sector</p>
+<p><span class="math inline tex-math">\(\pi_i(p_i)\)</span> measures returns to
+the sector-specific factor.</p>
+<p>Numeraire production uses labor alone: <span class="math inline tex-math">\(y_0=L_0\)</span>, <span class="math inline tex-math">\(p_0=1\)</span>. Positive output pins <span class="math inline tex-math">\(w=1\)</span>.</p>
+<p>Assume enough labor that <span class="math display tex-math">\[L_0=L-\sum_{i=1}^{N}L_i(p_i)&gt;0.\]</span></p>
+<p>Workers move freely across sectors. Numeraire employment absorbs
+residual labor, keeping total employment at <span class="math inline tex-math">\(L\)</span> as tariffs change.</p>
+
 </div><div class="slide-number">12/35</div></div>
 <div class="slide" data-logical="13" data-source-logical="13" data-steps="1"><h2>Prices and tariffs</h2><div class="slide-body">
 
